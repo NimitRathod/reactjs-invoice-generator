@@ -16,7 +16,7 @@ export default function Invoice() {
         cityStateCountryPin: '',
         invoiceTitle: 'Invoice',
     })
-    const { companyName , personName , address , cityStateCountryPin , invoiceTitle} = state;
+    const { companyName, personName, address, cityStateCountryPin, invoiceTitle } = state;
     const updateState = (data) => setState((state) => ({ ...state, ...data }));
     // const [startDate, setStartDate] = useState(Moment().format('DD/MM/YYYY'));
     // this.setStartDate = startDate ? Moment(startDate).format('DD/MM/YYYY') : 'DD/MM/YYYY';
@@ -65,15 +65,15 @@ export default function Invoice() {
                         </div>
                         <div className="view w-50">
                             {
-                                
+
                                 (invoiceTitle == '') ?
-                                <input
-                                    type="text"
-                                    className="input fs-45 right bold"
-                                    placeholder="Invoice"
-                                    autoComplete='false'
-                                    value={invoiceTitle}
-                                    onChange={invoiceTitle => updateState({ invoiceTitle: invoiceTitle.target.value })} />
+                                    <input
+                                        type="text"
+                                        className="input fs-45 right bold"
+                                        placeholder="Invoice"
+                                        autoComplete='false'
+                                        value={invoiceTitle}
+                                        onChange={invoiceTitle => updateState({ invoiceTitle: invoiceTitle.target.value })} />
                                     :
                                     <div className="fs-45 right bold dark mb-5"> {invoiceTitle}  </div>
                             }
@@ -117,18 +117,67 @@ export default function Invoice() {
                             </div>
                         </div>
                     </div>
-                    <div className="view mt-30 bg-dark flex">
-                        <div className="view w-48 p-4-8">
+                    <div className="mt-30 bg-dark flex">
+                        <div className="w-48 p-4-8">
                             <input type="text" className="input white bold" placeholder="" value="Item Description" />
                         </div>
-                        <div className="view w-17 p-4-8">
+                        <div className="w-17 p-4-8">
                             <input type="text" className="input white bold right" placeholder="" value="Qty" />
                         </div>
-                        <div className="view w-17 p-4-8">
+                        <div className="w-17 p-4-8">
                             <input type="text" className="input white bold right" placeholder="" value="Rate" />
                         </div>
-                        <div className="view w-18 p-4-8">
+                        <div className="w-18 p-4-8">
                             <input type="text" className="input white bold right" placeholder="" value="Amount" />
+                        </div>
+                    </div>
+                    <div className="row flex m-0-12">
+                        <div className="w-48 p-4-8 pb-10">
+                            <textarea className="input dark" placeholder="Enter item name/description" style={{ height: "48px !important", }}>Brochure Design</textarea>
+                        </div>
+                        <div className="w-17 p-4-8 pb-10">
+                            <input type="text" className="input dark right" placeholder="" value="2" />
+                        </div><div className="w-17 p-4-8 pb-10">
+                            <input type="text" className="input dark right" placeholder="" value="100.00" />
+                        </div>
+                        <div className="w-18 p-4-8 pb-10">
+                            <span className="span dark right">200.00</span>
+                        </div>
+                        <button className="link row__remove" aria-label="Remove Row" title="Remove Row">
+                            <span className="icon icon-remove bg-red"></span>
+                        </button>
+                    </div>
+                    <div className="view flex m-0-12">
+                        <div className="view w-50 mt-10">
+                            <button className="link">
+                                <span className="icon icon-add bg-green mr-10"></span>Add Line Item</button>
+                        </div>
+                        <div className="view w-50 mt-10">
+                            <div className="view flex">
+                                <div className="view w-50 p-5">
+                                    <input type="text" className="input " placeholder="" value="Sub Total" />
+
+                                </div>
+                                <div className="view w-50 p-5"><span className="span right bold dark">200.00</span>
+                                </div>
+                            </div>
+                            <div className="view flex">
+                                <div className="view w-50 p-5">
+                                    <input type="text" className="input " placeholder="" value="Sale Tax (10%)" />
+                                </div>
+                                <div className="view w-50 p-5">
+                                    <span className="span right bold dark">20.00</span>
+                                </div>
+                            </div>
+                            <div className="view flex bg-gray p-5">
+                                <div className="view w-50 p-5">
+                                    <input type="text" className="input bold" placeholder="" value="TOTAL" />
+                                </div>
+                                <div className="view w-50 p-5 flex">
+                                    <input type="text" className="input dark bold right ml-30" placeholder="" value="$" />
+                                    <span className="span right bold dark w-auto">220.00</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
