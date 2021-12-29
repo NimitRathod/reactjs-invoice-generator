@@ -1,0 +1,89 @@
+.invoiceApp { 
+    margin: 30px auto 50px; width: 70%; background: #f2f3f5;
+}
+.w-40 { width: 40% !important; }
+.w-45 { width: 45% !important; }
+.w-48 { width: 48% !important; }
+.w-50 { width: 50% !important; }
+.w-55 { width: 55% !important; }
+.w-60 { width: 60% !important; }
+
+.fs-30 { font-size: 30px !important; }
+.fs-45 { font-size: 45px !important; }
+
+.bold { font-weight: 600 !important; }
+
+.center { text-align: center !important; }
+.right { text-align: right !important; }
+
+.mb-5 { margin-bottom: 5px !important; }
+
+.mt-30 { margin-top: 30px; }
+.mt-40 { margin-top: 40px !important; }
+
+.p-4-8 { padding: 4px 8px; }
+
+.bg-dark { background-color: #666 !important; }
+.bg-dark .input, .select{
+    background: #666 !important;
+    border: 1px dotted transparent;
+}
+.bg-dark .input:focus,.bg-dark .input:hover,.bg-dark .select:focus,.bg-dark .select:hover {
+    border: 1px dotted transparent;
+    background: #fdf4db !important;
+    color: #666 !important;
+}
+.white { color: #fff; }
+
+.download-pdf{
+    position: fixed;
+    top: 100px;
+    margin-left: -110px;
+    width: 40px;
+    height: 40px;
+    /* background: url(/react-invoice-generator/static/media/download.5af81432.svg); */
+    transition: opacity .2s ease-in-out;
+}
+.invoice-wrapper {
+    position: relative;
+    background: #fff;
+    padding: 40px 35px;
+    box-shadow: 0 0 17px 0 rgb(16 40 73 / 9%);
+}
+.flex { display: flex; }
+
+.image { position: relative; display: inline-block; }
+.image__upload {
+    cursor: pointer;
+    font-size: 12px;
+    color: #aaa;
+    background-color: #e3e3e3;
+    border: 2px dashed #aaa;
+    display: block;
+    width: 100px;
+    height: 20px;
+    padding: 0;
+    outline: none;
+    transition: height .2s,font-size .2s;
+}
+.image__file {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+.input, .select, .span {
+    display: inline-block;
+    width: 98%;
+    padding: 4px 12px 4px 0;
+    margin-bottom: 1px;
+    border: 1px dotted transparent;
+    transition: background .1s ease-in-out,border-color .2s ease-in-out;
+}
+.input:focus, .input:hover, .select:focus, .select:hover {
+    background: #fdf4db !important;
+}
