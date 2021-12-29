@@ -1,6 +1,8 @@
 .invoiceApp { 
     margin: 30px auto 50px; width: 70%; background: #f2f3f5;
 }
+.w-17 { width: 17% !important; }
+.w-18 { width: 18% !important; }
 .w-40 { width: 40% !important; }
 .w-45 { width: 45% !important; }
 .w-48 { width: 48% !important; }
@@ -18,10 +20,22 @@
 
 .mb-5 { margin-bottom: 5px !important; }
 
-.mt-30 { margin-top: 30px; }
+.mt-10 { margin-top: 10px !important; }
+.mr-10 { margin-right: 10px !important; }
+.mt-20 { margin-top: 20px !important; }
+.mt-30 { margin-top: 30px !important; }
 .mt-40 { margin-top: 40px !important; }
+.m-0-12 { margin: 0px 12px !important; }
 
-.p-4-8 { padding: 4px 8px; }
+.p-5{ padding: 5px !important;}
+.pb-10 { padding-bottom: 10px !important; }
+.p-4-8 { padding: 4px 8px !important; }
+
+
+.row {
+    position: relative;
+    border-bottom: 1px solid #e3e3e3;
+}
 
 .bg-dark { background-color: #666 !important; }
 .bg-dark .input, .select{
@@ -35,6 +49,31 @@
 }
 .white { color: #fff; }
 
+button.link {
+    display: flex;
+    align-items: center;
+    border: 0;
+    color: #428bca;
+}
+button.link, textarea {
+    background: transparent;
+}
+
+button.link:focus, button.link:hover {
+    text-decoration: underline;
+}
+.row__remove {
+    display: flex;
+    padding: 0;
+    position: absolute;
+    top: 10px;
+    right: -20px;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+}
+.row:focus-within .row__remove, .row:hover .row__remove {
+    opacity: 1;
+}
 .download-pdf{
     position: fixed;
     top: 100px;
