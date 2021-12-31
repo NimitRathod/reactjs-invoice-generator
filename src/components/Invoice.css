@@ -9,6 +9,7 @@
 .w-50 { width: 50% !important; }
 .w-55 { width: 55% !important; }
 .w-60 { width: 60% !important; }
+.w-100 { width: 100% !important; }
 
 .fs-30 { font-size: 30px !important; }
 .fs-45 { font-size: 45px !important; }
@@ -54,13 +55,28 @@ button.link {
     align-items: center;
     border: 0;
     color: #428bca;
+    padding: 0px 10px;
 }
 button.link, textarea {
     background: transparent;
 }
 
+button.link i:focus, button.link i:hover {
+    text-decoration: none !important;
+}
 button.link:focus, button.link:hover {
-    text-decoration: underline;
+    cursor: pointer;
+    /* text-decoration: underline; */
+    /* background: #1c5d27;
+    color: #fff;
+    border-radius: 50px; */
+}
+button.link.addItem:focus, button.link.addItem:hover {
+    cursor: pointer;
+    /* text-decoration: underline; */
+    background: #1c5d27;
+    color: #fff;
+    border-radius: 50px;
 }
 .row__remove {
     display: flex;
@@ -99,11 +115,12 @@ button.link:focus, button.link:hover {
     background-color: #e3e3e3;
     border: 2px dashed #aaa;
     display: block;
-    width: 100px;
-    height: 20px;
+    width: 125px;
+    height: auto;
     padding: 0;
     outline: none;
     transition: height .2s,font-size .2s;
+    text-align: center;
 }
 .image__file {
     position: absolute;
@@ -114,6 +131,7 @@ button.link:focus, button.link:hover {
     overflow: hidden;
     clip: rect(0,0,0,0);
     border: 0;
+    padding: 5px; 
 }
 .input, .select, .span {
     display: inline-block;
