@@ -1,8 +1,8 @@
-import React,{useState} from 'react';
+import React from 'react';
 import Invoice from './components/Invoice';
 
 function App() {
-  const [invoice, setInvoice] = useState()
+  // const [invoice, setInvoice] = useState()
 
   return (
     <>
